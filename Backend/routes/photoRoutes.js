@@ -4,16 +4,18 @@ import multer from "multer";
 
 
 const upload = multer({dest:'uploads/'})
-
 const router = express.Router();
 
+
+
+
+//starting routes
 
 
 router.post('/upload', upload.single("image") , uploadPhoto);
 
 
 router.get('/', getPhoto);
-
 
 
 router.delete('/:id',deletePhoto);
